@@ -51,7 +51,7 @@ applications:
   memory: 512M
   instances: 1
   timeout: 180
-  services: [ $CF_APP_SERVICES ]
+  services: [ $CF_MQ_SERVICE_NAME ]
   env:
     JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
 EOF

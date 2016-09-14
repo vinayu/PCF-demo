@@ -10,6 +10,8 @@ cf-params: &cf-params
   CF_PASSWORD: {{cf-password}}
   CF_ORG: {{cf-org}}
   CF_SPACE: {{cf-space}}
+  CF_APP_NAME: {{cf-app-name}}
+  CF_APP_HOST: {{cf-app-host}}
   CF_MQ_SERVICE_NAME: {{cf-mq-service-name}}
   CF_MQ_SERVICE_PARAMS: {{cf-mq-service-params}}
 

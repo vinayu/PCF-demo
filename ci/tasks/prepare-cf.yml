@@ -1,0 +1,29 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: patrickcrocker/cloudfoundry-cli
+    tag: 'latest'
+
+inputs:
+- name: pcfdemo
+- name: candidate-release
+- name: version
+
+outputs:
+- name: prepare-cf-output
+
+params:
+  CF_API_URL:
+  CF_SKIP_SSL:
+  CF_USERNAME:
+  CF_PASSWORD:
+  CF_ORG:
+  CF_SPACE:
+  CF_MQ_SERVICE_NAME:
+  CF_MQ_SERVICE_PARAMS:
+
+run:
+  path: pcfdemo/ci/tasks/prepare-cf.sh

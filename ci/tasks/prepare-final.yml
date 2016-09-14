@@ -13,12 +13,7 @@ inputs:
   - name: version
 
 outputs:
-  - name: prepare-final
+  - name: prepare-final-output
 
 run:
   path: pcfdemo/ci/tasks/prepare-final.sh
-  args: [
-    "--input-dir", "candidate-release",
-    "--output-dir", "prepare-final",
-    "--version-file", "version/number"
-  ]

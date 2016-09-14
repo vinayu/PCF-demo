@@ -9,8 +9,11 @@ s3-bucket-release-candidates: pcfdemo-release-candidates  # Create and change th
 maven-opts: # -Xms256m -Xmx512m
 maven-config: # -s path/to/settings.xml
 cf-api: https://api.local.micropcf.io  # Change the following to match your Cloud Foundry environment
+cf-skip-ssl: true
 cf-username: admin
 cf-password: admin
 cf-org: micropcf-org
 cf-space: micropcf-space
 cf-manifest-host: pcfdemo-ci
+cf-mq-service-name: pcfdemo-mq
+cf-mq-service-params: p-rabbitmq standard pcfdemo-mq

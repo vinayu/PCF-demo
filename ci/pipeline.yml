@@ -138,7 +138,7 @@ resources:
 - name: cf
   type: cf
   source:
-    api: {{cf-api}}
+    api: {{cf-api-url}}
     username: {{cf-username}}
     password: {{cf-password}}
     organization: {{cf-org}}

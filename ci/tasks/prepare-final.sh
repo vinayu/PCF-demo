@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 version=$(cat version/number)
 
 # rename the artifact to the final version

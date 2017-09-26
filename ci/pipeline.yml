@@ -12,8 +12,8 @@ cf-params: &cf-params
   CF_SPACE: {{cf-space}}
   CF_APP_NAME: {{cf-app-name}}
   CF_APP_HOST: {{cf-app-host}}
-  CF_MQ_SERVICE_NAME: {{cf-mq-service-name}}
-  CF_MQ_SERVICE_PARAMS: {{cf-mq-service-params}}
+  #CF_MQ_SERVICE_NAME: {{cf-mq-service-name}}
+  #CF_MQ_SERVICE_PARAMS: {{cf-mq-service-params}}
 
 jobs:
 - name: unit-test
@@ -53,10 +53,10 @@ jobs:
     passed: [ build-artifact ]
   - get: version
     passed: [ build-artifact ]
-  - task: prepare-cf
-    file: pcfdemo/ci/tasks/prepare-cf.yml
-    params:
-      <<: *cf-params
+  #- task: prepare-cf
+   # file: pcfdemo/ci/tasks/prepare-cf.yml
+   # params:
+   #   <<: *cf-params
   - put: cf
     params:
       manifest: prepare-cf-output/manifest.yml

@@ -48,7 +48,7 @@ applications:
 - name: $CF_APP_NAME
   host: $CF_APP_HOST
   path: $ARTIFACT_PATH
-  memory: 512M
+  memory: 1G
   instances: 1
   timeout: 180
 #  services: [ $CF_MQ_SERVICE_NAME ]

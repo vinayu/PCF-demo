@@ -51,10 +51,10 @@ jobs:
     passed: [ build-artifact ]
   - get: version
     passed: [ build-artifact ]
-  #- task: prepare-cf
-   # file: pcfdemo/ci/tasks/prepare-cf.yml
-   # params:
-   #   <<: *cf-params
+  - task: prepare-cf
+    file: pcfdemo/ci/tasks/prepare-cf.yml
+    params:
+      <<: *cf-params
   - put: cf
     params:
       manifest: prepare-cf-output/manifest.yml

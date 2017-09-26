@@ -30,10 +30,10 @@ fi
 cf target -s $CF_SPACE
 
 # Create RabbitMQ service if it doesn't exist
-HAS_SERVICE=$(cf services | grep $CF_MQ_SERVICE_NAME || true)
-if [ -z "$HAS_SERVICE" ]; then
-  cf create-service $CF_MQ_SERVICE_PARAMS
-fi
+# HAS_SERVICE=$(cf services | grep $CF_MQ_SERVICE_NAME || true)
+# if [ -z "$HAS_SERVICE" ]; then
+#  cf create-service $CF_MQ_SERVICE_PARAMS
+# fi
 
 # copy the artifact to the task output folder
 cp candidate-release/pcf-demo-*.war prepare-cf-output/.
@@ -51,7 +51,7 @@ applications:
   memory: 512M
   instances: 1
   timeout: 180
-  services: [ $CF_MQ_SERVICE_NAME ]
+#  services: [ $CF_MQ_SERVICE_NAME ]
   env:
     JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
 EOF
